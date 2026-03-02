@@ -23,6 +23,15 @@ async function main() {
   const nftAddress = await nft.getAddress();
   console.log("WhitePanther NFT deployed to:", nftAddress);
 
+  // ── Mint MOCK tokens to deployer for testing ──
+  const mintAmount = ethers.parseUnits("10000", 18); // 10,000 MOCK tokens
+  await mockToken.mint(deployer.address, mintAmount);
+  console.log("Minted 10,000 MOCK tokens to deployer");
+
+  // ── Approve NFT contract to spend MOCK tokens ──
+  await mockToken.approve(nftAddress, ethers.MaxUint256);
+  console.log("Approved NFT contract to spend MOCK tokens");
+
   console.log("\n══════════════════════════════════════");
   console.log("  Deployment Summary");
   console.log("══════════════════════════════════════");
@@ -30,6 +39,7 @@ async function main() {
   console.log(`  NFT Contract  : ${nftAddress}`);
   console.log(`  Mint Price    : 100 MOCK tokens`);
   console.log(`  Max Supply    : 10,000 NFTs`);
+  console.log(`  Deployer MOCK : 10,000 tokens (ready to mint)`);
   console.log("══════════════════════════════════════\n");
 }
 
