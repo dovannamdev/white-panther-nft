@@ -74,7 +74,7 @@ export const CHAIN_CONFIG: Record<
   },
 };
 
-// ⚠️ Replace with actual contract address after deployment
+// Deployed on Arbitrum Sepolia
 export const NFT_CONTRACT_ADDRESS =
   import.meta.env.VITE_NFT_CONTRACT_ADDRESS ||
-  "0x0000000000000000000000000000000000000000";
+  "0x206F431abCEdd9E5022E55BE834CAE9a31d95cC6";
