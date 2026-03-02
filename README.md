@@ -123,21 +123,6 @@ npm run dev       # http://localhost:3000
 npm run build
 ```
 
-### 5. Deploy to TOSE
-
-```bash
-# Install TOSE CLI
-npm install -g @tosesh/tose
-
-# Login & deploy
-tose login
-tose up
-
-# Update env after contract deployment
-tose env set VITE_NFT_CONTRACT_ADDRESS=0xYourAddress
-tose deploy
-```
-
 ## Smart Contract Features
 
 - **ERC-721** NFT (ERC721Enumerable) — OpenZeppelin v5

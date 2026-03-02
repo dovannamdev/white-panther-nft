@@ -5,6 +5,8 @@ WORKDIR /app
 COPY frontend/package*.json ./
 RUN npm ci
 
+# Bust Docker cache to pick up source changes
+ARG CACHEBUST=1
 COPY frontend/ .
 
 ARG VITE_NFT_CONTRACT_ADDRESS=0x0000000000000000000000000000000000000000
