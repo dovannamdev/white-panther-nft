@@ -117,6 +117,22 @@ export function useWallet() {
     });
   }, []);
 
+  // -- Auto-reconnect on page load --
+  useEffect(() => {
+    if (!window.ethereum) return;
+
+    // eth_accounts returns already-authorized accounts (no popup)
+    window.ethereum
+      .request({ method: "eth_accounts" })
+      .then((accounts: unknown) => {
+        const accs = accounts as string[];
+        if (accs.length > 0) {
+          connect();
+        }
+      })
+      .catch(() => {});
+  }, [connect]);
+
   // -- Listen for account/chain changes --
   useEffect(() => {
     if (!window.ethereum) return;
