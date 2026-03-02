@@ -15,7 +15,7 @@ A premium **10,000 NFT** collection on **Arbitrum** — Mint with ERC-20 tokens,
 
 ## 🎬 Video Demo
 
-> _Coming soon — Full minting flow walkthrough_
+📺 **[Watch Full Demo](https://drive.google.com/file/d/15vaGaCQxP9drUvhq9t2QrvAI402HGmd_/view?usp=sharing)** — Connect wallet, approve tokens, and mint NFTs on Arbitrum Sepolia
 
 ## Architecture
 
